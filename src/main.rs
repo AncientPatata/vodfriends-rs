@@ -7,7 +7,7 @@ use twitch::{
 
 #[tokio::main]
 async fn main() -> Result<(), TwitchClientError> {
-    let video_id = "1856305231";
+    let video_id = "SOME VIDEO ID";
     let mut twitch_client = TwitchClient::new();
     let download_options = DownloadOptions::new(video_id.to_string());
     let playlists = twitch_client.get_vod_links(&download_options).await?;
